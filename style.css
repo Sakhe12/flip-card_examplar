@@ -1,0 +1,56 @@
+*,
+*::after
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+    position: relative;
+    perspective: 100%;
+}
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.front {
+    z-index: 20;
+}
+.profile {
+    width: 100%;
+    border-radius: 5%;
+    object-fit: cover;
+    transition: 2;em
+}
+/* body {
+    background-color: aquamarine;
+}
+.back {
+    background-color: maroon;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
+}
+.back h2 {
+    background-color: antiquewhite;
+    text-shadow: .2vw, 2vw, .3vw whitesmoke;
+}
+.back p{
+    background-color: red;
+    font-size: 2em;
+    margin: 2em 0;
+}
+.container:hover .front {
+    transform: rotate(180deg);
+    z-index: 1;
+}
